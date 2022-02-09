@@ -1,4 +1,4 @@
-# uber-clone
+# Uber Clone
 Creating an Uber Clone. V2.0
 
 # New Skills learnt from this tutorial.
