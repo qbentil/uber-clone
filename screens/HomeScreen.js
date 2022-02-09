@@ -4,8 +4,9 @@ import React from 'react'
 
 const HomeScreen = () => {
   return (
-    <View style = {container}>
-      <Text>Welcome HomeScreen!</Text>
+    <View style = {styles.container}>
+      <Text>Welcome Home!</Text>
+      <Text>Vector Icons!</Text>
     </View>
   )
 }
