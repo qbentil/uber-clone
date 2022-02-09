@@ -5,7 +5,7 @@ import React from 'react'
 const HomeScreen = () => {
   return (
     <View style = {container}>
-      <Text>HomeScreen!</Text>
+      <Text>Welcome HomeScreen!</Text>
     </View>
   )
 }
