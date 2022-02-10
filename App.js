@@ -1,14 +1,30 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 import HomeScreen from './screens/HomeScreen';
+import MapScreens from './screens/MapScreens';
+import { NavigationContainer } from '@react-navigation/native';
 import { Provider } from 'react-redux';
 import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { StatusBar } from 'expo-status-bar';
+import { createStackNavigator } from '@react-navigation/stack';
 import store from './store';
 
-// SET UP REDUX
+// SET Stack navigator
 
+
+const Stack = createStackNavigator();
+
+// function MyStack() {
+//   return (
+//     <Stack.Navigator>
+//       <Stack.Screen name="HomeScreen" component={HomeScreen} options = {{headerShown: false}}/>
+//       <Stack.Screen name="MapScreen" component={MapScreens} options = {{headerShown: false}} />
+//       {/* <Stack.Screen name="Profile" component={Profile} />
+//       <Stack.Screen name="Settings" component={Settings} /> */}
+//     </Stack.Navigator>
+//   );
+// }
 
 
 
@@ -18,7 +34,12 @@ export default function App() {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <HomeScreen />
+        <NavigationContainer>
+          <Stack.Navigator>
+                <Stack.Screen name="HomeScreen" component={HomeScreen} options = {{headerShown: false}}/>
+                <Stack.Screen name="MapScreen" component={MapScreens} options = {{headerShown: false}} />
+            </Stack.Navigator>
+        </NavigationContainer>
       </SafeAreaProvider>
     </Provider>
   );
