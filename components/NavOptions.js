@@ -15,7 +15,7 @@ const data = [
     {
         id: "123",
         title: "Package",
-        image: "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_485,h_385/f_auto,q_auto/products/carousel/UberX.png",
+        image: "https://github.com/qbentil/uber-clone/blob/master/assets/package.png?raw=true",
         screen: "PackageScreen"
     }
 ];
