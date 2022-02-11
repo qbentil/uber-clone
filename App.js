@@ -15,21 +15,6 @@ import store from './store';
 
 const Stack = createStackNavigator();
 
-// function MyStack() {
-//   return (
-//     <Stack.Navigator>
-//       <Stack.Screen name="HomeScreen" component={HomeScreen} options = {{headerShown: false}}/>
-//       <Stack.Screen name="MapScreen" component={MapScreens} options = {{headerShown: false}} />
-//       {/* <Stack.Screen name="Profile" component={Profile} />
-//       <Stack.Screen name="Settings" component={Settings} /> */}
-//     </Stack.Navigator>
-//   );
-// }
-
-
-
-
-
 export default function App() {
   return (
     <Provider store={store}>
