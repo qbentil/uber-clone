@@ -10,7 +10,7 @@ const MapScreens = () => {
     const navigation = useNavigation();
   return (
     <View>
-        <Text>This is thr map view</Text>
+        {/* <Text>This is thr map view</Text> */}
         <View style={tw`h-1/2`}>
             <Map />
         </View>
