@@ -34,7 +34,7 @@ const HomeScreen = () => {
         query={{
             key: GOOGLE_MAPS_APIKEY,
             language: 'en',
-            // components: 'country:ghana',
+            components: 'country:gh',
         }}
         // textInputProps={{
         //     InputComp: Input,
@@ -53,7 +53,7 @@ const HomeScreen = () => {
         fetchDetails = {true}
         nearbyPlacesAPI='GooglePlacesSearch'
         debounce={400}
-        placeholder="Where from?"
+        placeholder="Curent location?"
         enablePoweredByContainer = {false}
         // currentLocation={true}
         // currentLocationLabel='Current location'
@@ -63,7 +63,7 @@ const HomeScreen = () => {
   )
 }
 
-export default HomeScreen
+
 
 const styles = StyleSheet.create({
     logo: {
@@ -72,3 +72,5 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     }
 })
+
+export default HomeScreen
