@@ -24,39 +24,38 @@ const HomeScreen = () => {
       </View>
       <GooglePlacesAutocomplete 
         style={{
-            container: {
+            textInputContainer: {
                 flex: 0,
             },
             textInput: {
-                fontSize: 18
-            }
+                fontSize: 18,
+            },
+            predefinedPlacesDescription: {
+                color: '#1faadb',
+            },
         }}
         query={{
             key: GOOGLE_MAPS_APIKEY,
             language: 'en',
             components: 'country:gh',
         }}
-        // textInputProps={{
-        //     InputComp: Input,
-        //     leftIcon: { type: 'font-awesome', name: 'chevron-left' },
-        //     errorStyle: { color: 'red' },
-        // }}
-        onPress = {(data, detailes=null) => {
+        onPress = {(data, details=null) => {
             dispatch(setOrigin({
-                location: detailes.geometry.location,
+                location: details.geometry.location,
                 description: data.description
             }))
 
-            dispatch(setOrigin(null))
+            dispatch(setDestination(null))
+            // console.log(details)
         }}
-        
+        minLength={2}
+        returnKeyType= {"search"}
         fetchDetails = {true}
         nearbyPlacesAPI='GooglePlacesSearch'
         debounce={400}
         placeholder="Curent location?"
         enablePoweredByContainer = {false}
-        // currentLocation={true}
-        // currentLocationLabel='Current location'
+
       />
       <NavOptions />
     </SafeAreaView>
