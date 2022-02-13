@@ -3,6 +3,7 @@ import { setDestination, setOrigin } from '../slices/navSlice';
 
 import {GOOGLE_MAPS_APIKEY} from "@env"
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import NavFavourites from '../components/NavFavourites';
 import NavOptions from '../components/NavOptions';
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -23,17 +24,22 @@ const HomeScreen = () => {
           />
       </View>
       <GooglePlacesAutocomplete 
-        style={{
-            textInputContainer: {
+        styles={{
+            container: {
                 flex: 0,
             },
             textInput: {
                 fontSize: 18,
             },
+            textInputContainer: {
+                paddingHorizontal: 10,
+                marginHorizontal: 5,
+            },
             predefinedPlacesDescription: {
                 color: '#1faadb',
             },
         }}
+
         query={{
             key: GOOGLE_MAPS_APIKEY,
             language: 'en',
@@ -46,7 +52,6 @@ const HomeScreen = () => {
             }))
 
             dispatch(setDestination(null))
-            // console.log(details)
         }}
         minLength={2}
         returnKeyType= {"search"}
@@ -55,9 +60,9 @@ const HomeScreen = () => {
         debounce={400}
         placeholder="Curent location?"
         enablePoweredByContainer = {false}
-
       />
       <NavOptions />
+      <NavFavourites />
     </SafeAreaView>
   )
 }
