@@ -2,8 +2,10 @@ import { FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View }
 
 import { Icon } from 'react-native-elements';
 import React from 'react';
+import {selectOrigin} from "../slices/navSlice"
 import tw from 'twrnc';
 import { useNavigation } from '@react-navigation/native'
+import {useSelector} from "react-redux"
 
 const data = [
     {
@@ -22,14 +24,16 @@ const data = [
 
 const NavOptions = () => {
     const navigation = useNavigation();
+    const origin = useSelector(selectOrigin);
   return (
-    <ScrollView>
-        <View style = {[tw`m-2 p-2 bg-green-500 w-100 h-35 rounded-xl`, styles.showCase]}>
+    <View>
+        <View style = {[tw`m-2 p-2 bg-green-500 w-100 h-35  rounded-xl`, styles.showCase]}>
             <View >
                 <Text style={[tw`p-2 pb-0 font-semibold text-xl`, {fontSize: 18}]}>UberX Share is here!</Text>
                 <TouchableOpacity 
                     onPress={() => navigation.navigate("")}
                     style={[tw`p-2 pt-0 mt-1`,{display:'flex', flexDirection: 'row'}]}
+                    disabled={!origin}
                 >
                     <Text style={[tw`text-lg`, {fontSize: 13}]}>Try UberXShare </Text>
                     <Icon 
@@ -56,7 +60,7 @@ const NavOptions = () => {
                     style = {[tw`p-2 pl-6 pb-9 pt-0 bg-gray-200 m-2 w-48 h-30 rounded-md`, ]}
                     onPress={() => navigation.navigate(item.screen)}
                 >
-                    <View>
+                    <View style={tw`${!origin && "opacity-50"}`}>
                         <Image 
                             style = {[tw`ml-20`, styles.navImage]}
                             source={{uri: item.image}}
@@ -72,7 +76,7 @@ const NavOptions = () => {
                 </TouchableOpacity>
             )}
         />
-    </ScrollView>
+    </View>
   )
 }
 
