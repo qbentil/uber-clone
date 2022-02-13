@@ -33,7 +33,6 @@ const NavOptions = () => {
                 <TouchableOpacity 
                     onPress={() => navigation.navigate("")}
                     style={[tw`p-2 pt-0 mt-1`,{display:'flex', flexDirection: 'row'}]}
-                    disabled={!origin}
                 >
                     <Text style={[tw`text-lg`, {fontSize: 13}]}>Try UberXShare </Text>
                     <Icon 
@@ -57,6 +56,7 @@ const NavOptions = () => {
             keyExtractor={(item) => item.id}
             renderItem={({item}) => (
                 <TouchableOpacity 
+                    disabled={!origin}
                     style = {[tw`p-2 pl-6 pb-9 pt-0 bg-gray-200 m-2 w-48 h-30 rounded-md`, ]}
                     onPress={() => navigation.navigate(item.screen)}
                 >
