@@ -6,3 +6,6 @@ Creating an Uber Clone. V2.0
 2. React Native Elements and Vector Icons
 3. React native Safe Content
 4. Style UI using TailWind React native class names.
+5. React native Maps
+6. React native maps direction
+7. React Native Google Places AutoComplete 
