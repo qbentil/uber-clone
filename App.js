@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { KeyboardAvoidingView, Platform, StyleSheet } from 'react-native';
 
 import HomeScreen from './screens/HomeScreen';
 import MapScreens from './screens/MapScreens';
@@ -19,12 +19,14 @@ export default function App() {
   return (
     <Provider store={store}>
       <SafeAreaProvider>
-        <NavigationContainer>
-          <Stack.Navigator>
-                <Stack.Screen name="HomeScreen" component={HomeScreen} options = {{headerShown: false}}/>
-                <Stack.Screen name="MapScreen" component={MapScreens} options = {{headerShown: false}} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <KeyboardAvoidingView behavior = {Platform.OS === "ios"? 'padding': 'height'} style={{flex:1}}>
+          <NavigationContainer>
+                <Stack.Navigator>
+                      <Stack.Screen name="HomeScreen" component={HomeScreen} options = {{headerShown: false}}/>
+                      <Stack.Screen name="MapScreen" component={MapScreens} options = {{headerShown: false}} />
+                  </Stack.Navigator>
+          </NavigationContainer>
+        </KeyboardAvoidingView>
       </SafeAreaProvider>
     </Provider>
   );
