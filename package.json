@@ -1,6 +1,9 @@
 {
   "name": "uber-clone",
   "version": "1.0.0",
+  "slug": "uber-clone",
+  "owner": "qbentil",
+  "github-url": "https://github.com/qbentil/uber-clone",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
