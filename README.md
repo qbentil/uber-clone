@@ -6,6 +6,10 @@ Creating an Uber Clone. V2.0
 ⚙️   Project page: https://expo.dev/@qbentil/uber-clone?serviceType=classic&distribution=expo-go 
 <div style = "display:flex; flex-direction: row; flex-wrap: wrap;justify-content: space-around;">
     <img src = "./assets/1.jpg"  style = "width: 150px"/>
+    <img src = "./assets/2.jpg"  style = "width: 150px"/>
+    <img src = "./assets/3.jpg"  style = "width: 150px"/>
+    <img src = "./assets/4.jpg"  style = "width: 150px"/>
+    <img src = "./assets/5.jpg"  style = "width: 150px"/>
 </div>
 
 
