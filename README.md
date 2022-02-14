@@ -1,5 +1,9 @@
 # Uber Clone
 Creating an Uber Clone. V2.0
+# Published Build:  DEMO
+
+📝  Manifest: https://exp.host/@qbentil/uber-clone/index.exp?sdkVersion=44.0.0 
+⚙️   Project page: https://expo.dev/@qbentil/uber-clone?serviceType=classic&distribution=expo-go 
 
 # New Skills learnt from this tutorial.
 1. React Redux (configuring store, reducrs and slices)
