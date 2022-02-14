@@ -19,7 +19,7 @@ const MapScreens = () => {
         </View>
         <View style={tw`h-1/2`}>
             <Stack.Navigator>
-              <Stack.Screen name="MavigateCard" component={NavigateCard} options = {{headerShown: false}}/>
+              <Stack.Screen name="NavigateCard" component={NavigateCard} options = {{headerShown: false}}/>
               <Stack.Screen name="RideOptionCard" component={RideOptionsCard} options = {{headerShown: false}}/>
             </Stack.Navigator>
         </View>
