@@ -33,7 +33,7 @@ const NavigateCard =() => {
                     query={{
                         key: GOOGLE_MAPS_APIKEY,
                         language: 'en',
-                        components: 'country:gh',
+                        // components: 'country:gh',
                     }}
                     onPress = {(data, details=null) => {
                         dispatch(setDestination({
