@@ -17,7 +17,15 @@ const NavigateCard =() => {
     const dispatch = useDispatch();
     return (
         <SafeAreaView style={tw`bg-white flex-1`}>
-            <Text style={tw`text-center text-xl mt--9`}> Welcome Bentil! </Text>
+            <View style={tw`flex-row justify-around text-center`}>
+                {/* <TouchableOpacity
+                        onPress = {() => navigation.navigate('NavigateCard')}
+                        style={tw`py-2 rounded-full  mt--9`}
+                    >
+                        <Icon name = "chevron-left" type='fontawesome' />
+                    </TouchableOpacity> */}
+                <Text style={tw`text-center py-2 text-sm mt--9`}> Where are you going today?</Text>
+            </View>
             <View style={tw`border-t border-gray-200 flex-shrink`}>
 
                 <GooglePlacesAutocomplete 
@@ -46,7 +54,7 @@ const NavigateCard =() => {
 
                 />
             </View>
-            <NavFavourites />
+            {/* <NavFavourites /> */}
             <View  style={tw`flex-row bg-white justify-evenly py-2 mt-auto border-t border-gray-100`} >
                 <TouchableOpacity style={tw`flex flex-row bg-black w-24 px-4 justify-between py-3 rounded-full`}
                     onPress={() => navigation.navigate('RideOptionCard')}
@@ -89,7 +97,9 @@ const inputBoxStyle = StyleSheet.create({
         height: 38,
         borderRadius: 0,
         fontSize: 18,
-        height: 45
+        height: 45,
+        borderWidth: 1
+        
     }
 });
 
