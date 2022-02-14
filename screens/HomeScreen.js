@@ -1,8 +1,9 @@
-import { TouchableOpacity, Image,  StyleSheet, Text, View } from 'react-native'
+import {DEVELOPER_OUTRO, GOOGLE_MAPS_APIKEY} from "@env"
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { setDestination, setOrigin } from '../slices/navSlice';
-import { Icon } from 'react-native-elements';
-import {GOOGLE_MAPS_APIKEY, DEVELOPER_OUTRO} from "@env"
+
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+import { Icon } from 'react-native-elements';
 import NavFavourites from '../components/NavFavourites';
 import NavOptions from '../components/NavOptions';
 import React from 'react'
@@ -10,6 +11,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import tw from 'twrnc';
 import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native'
+
 // import {GOOGLE_MAPS_APIKEY} from "@env"
 
 const HomeScreen = () => {
@@ -27,14 +29,21 @@ const HomeScreen = () => {
             }}
           />
         <TouchableOpacity 
-            style = {tw`bg-gray-100 absolute top-9 right-6 z-50 p-1 rounded-full shadow-lg`}
+            style = {tw`bg-gray-100 absolute top-9 right-6 z-50 p-2 border border-gray-200 rounded-full shadow-lg`}
             onPress = {() => alert(DEVELOPER_OUTRO)}
             // onPress = {() => navigation.navigate("HomeScreen")}
         >
-            <Icon
+            {/* <Icon
                 name='person-circle-outline'
                 type='ionicon'
                 size={45}
+            /> 
+            */}
+            <Image 
+                style = {styles.avatar}
+                source={{
+                    uri: "https://codersquiz.netlify.app/img/bentil.jpeg" //uber logo link
+                }} 
             />
         </TouchableOpacity>
       </View>
@@ -89,6 +98,14 @@ const styles = StyleSheet.create({
         width: 100,
         height: 100,
         resizeMode: 'contain'
+    },
+    avatar: {
+        width: 45,
+        height: 45,
+        resizeMode: 'contain',
+        // borderWidth: 1,
+        // borderColor: "gray",
+        borderRadius: 30,
     }
 })
 
