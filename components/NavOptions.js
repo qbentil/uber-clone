@@ -18,7 +18,7 @@ const data = [
         id: "123",
         title: "Package",
         image: "https://github.com/qbentil/uber-clone/blob/master/assets/package.png?raw=true",
-        screen: "PackageScreen"
+        screen: "MapScreen"
     }
 ];
 
@@ -31,7 +31,8 @@ const NavOptions = () => {
             <View >
                 <Text style={[tw`p-2 pb-0 font-semibold text-xl`, {fontSize: 18}]}>UberX Share is here!</Text>
                 <TouchableOpacity 
-                    onPress={() => navigation.navigate("")}
+                    disabled={!origin}
+                    onPress={() => navigation.navigate("MapScreen")}
                     style={[tw`p-2 pt-0 mt-1`,{display:'flex', flexDirection: 'row'}]}
                 >
                     <Text style={[tw`text-lg`, {fontSize: 13}]}>Try UberXShare </Text>
