@@ -49,7 +49,7 @@ const RideOptionsCard =() => {
                 >
                     <Icon name = "chevron-left" type='fontawesome' />
                 </TouchableOpacity>
-                <Text style={tw`text-center py-5 text-sm mt--9`}> Choose a ride - {travelTimeInformation?.distance.text}</Text>
+                <Text style={tw`text-center py-5 text-sm mt--9`}> Choose a ride - {travelTimeInformation?.distance?.text}</Text>
             </View>
             <FlatList data = {data}
                 keyExtractor = {(item) => item.id}
@@ -68,10 +68,10 @@ const RideOptionsCard =() => {
                         />
                         <View style={tw`-ml-6`}>
                             <Text style={tw`text-xl font-semibold`}>{title}</Text>
-                            <Text>Travel Time: {travelTimeInformation?.duration.text}</Text>
+                            <Text>Travel Time: {travelTimeInformation?.duration?.text}</Text>
                         </View>
                         {/* Pricing */}
-                        <Text style={tw`text-xl`}>{getPrice(travelTimeInformation?.duration.value, multiplier)}</Text>
+                        <Text style={tw`text-xl`}>{getPrice(travelTimeInformation?.duration?.value, multiplier)}</Text>
                     </TouchableOpacity>
 
                 )}
