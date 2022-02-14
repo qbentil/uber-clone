@@ -1,12 +1,12 @@
 import {FlatList, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import React, {useState} from 'react';
 
 import { Icon } from 'react-native-elements';
-import React, {useState} from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { selectTravelTimeInformation } from '../slices/navSlice';
 import tw from 'twrnc';
 import {useNavigation} from "@react-navigation/native"
 import { useSelector } from 'react-redux';
-import { selectTravelTimeInformation } from '../slices/navSlice';
 
 // Data
 const data = [
@@ -49,7 +49,7 @@ const RideOptionsCard =() => {
                 >
                     <Icon name = "chevron-left" type='fontawesome' />
                 </TouchableOpacity>
-                <Text style={tw`text-center py-5 text-sm mt--9`}> Choose a ride - {travelTimeInformation?.distance?.text}</Text>
+                <Text style={tw`text-center py-5 text-sm mt--9`}> Choose a ride - {(travelTimeInformation?.distance?.text)?.replace("mi", "miles")}</Text>
             </View>
             <FlatList data = {data}
                 keyExtractor = {(item) => item.id}
