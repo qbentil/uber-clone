@@ -1,7 +1,7 @@
 import { TouchableOpacity, Image,  StyleSheet, Text, View } from 'react-native'
 import { setDestination, setOrigin } from '../slices/navSlice';
 import { Icon } from 'react-native-elements';
-import {GOOGLE_MAPS_APIKEY, DEVELOPER} from "@env"
+import {GOOGLE_MAPS_APIKEY, DEVELOPER_OUTRO} from "@env"
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import NavFavourites from '../components/NavFavourites';
 import NavOptions from '../components/NavOptions';
@@ -28,7 +28,7 @@ const HomeScreen = () => {
           />
         <TouchableOpacity 
             style = {tw`bg-gray-100 absolute top-9 right-6 z-50 p-1 rounded-full shadow-lg`}
-            onPress = {() => alert("Themanbentil👩‍💻 made it❤ \n \n FOLLOW UP \n\n WhatsApp +233556844331 \n GitHub @qbentil \n Twitter @themanbentil")}
+            onPress = {() => alert(DEVELOPER_OUTRO)}
             // onPress = {() => navigation.navigate("HomeScreen")}
         >
             <Icon
