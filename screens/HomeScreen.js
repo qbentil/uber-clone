@@ -1,6 +1,6 @@
-import { Image, Input, StyleSheet, Text, View } from 'react-native'
+import { TouchableOpacity, Image,  StyleSheet, Text, View } from 'react-native'
 import { setDestination, setOrigin } from '../slices/navSlice';
-
+import { Icon } from 'react-native-elements';
 import {GOOGLE_MAPS_APIKEY} from "@env"
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import NavFavourites from '../components/NavFavourites';
@@ -9,9 +9,11 @@ import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import tw from 'twrnc';
 import { useDispatch } from 'react-redux';
+import { useNavigation } from '@react-navigation/native'
 
 const HomeScreen = () => {
     const dispatch = useDispatch()
+    const navigation = useNavigation()
   return (
     <SafeAreaView style = {tw`bg-white h-full`}>
       <View style={tw`p-5`}>
@@ -22,6 +24,16 @@ const HomeScreen = () => {
                 uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png" //uber logo link
             }}
           />
+        <TouchableOpacity 
+            style = {tw`bg-gray-100 absolute top-9 right-6 z-50 p-1 rounded-full shadow-lg`}
+            onPress = {() => navigation.navigate("HomeScreen")}
+        >
+            <Icon
+                name='person-circle-outline'
+                type='ionicon'
+                size={45}
+            />
+        </TouchableOpacity>
       </View>
       <GooglePlacesAutocomplete 
         styles={{
