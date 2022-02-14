@@ -1,7 +1,7 @@
 import { TouchableOpacity, Image,  StyleSheet, Text, View } from 'react-native'
 import { setDestination, setOrigin } from '../slices/navSlice';
 import { Icon } from 'react-native-elements';
-import {GOOGLE_MAPS_APIKEY} from "@env"
+import {GOOGLE_MAPS_APIKEY, DEVELOPER} from "@env"
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 import NavFavourites from '../components/NavFavourites';
 import NavOptions from '../components/NavOptions';
@@ -10,10 +10,12 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import tw from 'twrnc';
 import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native'
+// import {GOOGLE_MAPS_APIKEY} from "@env"
 
 const HomeScreen = () => {
     const dispatch = useDispatch()
     const navigation = useNavigation()
+
   return (
     <SafeAreaView style = {tw`bg-white h-full`}>
       <View style={tw`p-5`}>
@@ -26,7 +28,8 @@ const HomeScreen = () => {
           />
         <TouchableOpacity 
             style = {tw`bg-gray-100 absolute top-9 right-6 z-50 p-1 rounded-full shadow-lg`}
-            onPress = {() => navigation.navigate("HomeScreen")}
+            onPress = {() => alert("Themanbentil👩‍💻 made it❤ \n \n FOLLOW UP \n\n WhatsApp +233556844331 \n GitHub @qbentil \n Twitter @themanbentil")}
+            // onPress = {() => navigation.navigate("HomeScreen")}
         >
             <Icon
                 name='person-circle-outline'
@@ -55,7 +58,7 @@ const HomeScreen = () => {
         query={{
             key: GOOGLE_MAPS_APIKEY,
             language: 'en',
-            components: 'country:gh',
+            // components: 'country:gh',
         }}
         onPress = {(data, details=null) => {
             dispatch(setOrigin({
