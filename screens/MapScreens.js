@@ -1,4 +1,5 @@
-import { TouchableOpacity, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+
 import { Icon } from 'react-native-elements';
 import Map from '../components/Map';
 import NavigateCard from '../components/NavigateCard';
@@ -7,8 +8,6 @@ import RideOptionsCard from '../components/RideOptionsCard';
 import { createStackNavigator } from '@react-navigation/stack';
 import tw from 'twrnc';
 import { useNavigation } from '@react-navigation/native'
-
-// import { KeyboardAvoidingView } from 'react-native-web';
 
 const MapScreens = () => {
   const Stack = createStackNavigator();
