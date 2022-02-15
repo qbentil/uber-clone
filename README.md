@@ -24,3 +24,7 @@ This clone gives real time map directions using the google maps API abn also giv
 7. React Native Google Places AutoComplete 
 8. Implemening Google Direction Matrix API
 
+
+## **Comments**
+It's a nice experience using REACT NATIVE TAILWIND CLASSNAME. 
+It makes styling of the components much easier and faster. I will be using in my coming projects
