@@ -12,8 +12,6 @@ import tw from 'twrnc';
 import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native'
 
-// import {GOOGLE_MAPS_APIKEY} from "@env"
-
 const HomeScreen = () => {
     const dispatch = useDispatch()
     const navigation = useNavigation()
