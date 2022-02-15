@@ -12,7 +12,7 @@ Creating an Uber Clone. V2.0
     <img src = "./assets/5.jpg"  style = "width: 150px"/>
 </div>
 
-This clone gives real time map directions using the google maps API abn also gives distances between Origin and dsetination with estimated cost using the Google Direction Matrix API. Users can also select any venue as thier destination from the List of places provided by Google Places Autocomplete.
+This clone gives real time map directions using the *google maps API* abn also gives distances between Origin and dsetination with estimated cost using the *Google Direction Matrix API*. Users can also select any venue as thier destination from the List of places provided by *Google Places Autocomplete.*
 
 # New Skills learnt from this tutorial.
 1. React Redux (configuring store, reducrs and slices)
