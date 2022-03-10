@@ -1,9 +1,10 @@
 # Uber Clone
 Creating an Uber Clone. V2.0
-# Published Build:  DEMO
+## Published Build:  DEMO
 
 📝  Manifest: https://exp.host/@qbentil/uber-clone/index.exp?sdkVersion=44.0.0 <br />
 ⚙️   Project page: https://expo.dev/@qbentil/uber-clone?serviceType=classic&distribution=expo-go 
+
 <div style = "display:flex; flex-direction: row; flex-wrap: wrap;justify-content: space-around;">
     <img src = "./assets/1.jpg"  style = "width: 150px"/>
     <img src = "./assets/2.jpg"  style = "width: 150px"/>
